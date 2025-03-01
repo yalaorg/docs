@@ -1,13 +1,13 @@
 # Table of contents
 
-## Introducing Yala
+## YALA: Bitcoin Liquidity Solution
 
 * [About Yala](README.md)
   * [Try Yala Testnet](https://app-testnet.yala.org/)
-  * [Current Bitcoin limitations for smart contracts and DeFi](introducing-yala/about-yala/current-bitcoin-limitations-for-smart-contracts-and-defi.md)
-  * [$YU: BTC-backed stablecoin earning yield across chains](introducing-yala/about-yala/usdyu-btc-backed-stablecoin-earning-yield-across-chains.md)
-  * [Our Mission](introducing-yala/about-yala/our-mission.md)
-  * [Yala's Value Proposition](introducing-yala/about-yala/yalas-value-proposition.md)
+  * [Market Challenge](yala-bitcoin-liquidity-solution/about-yala/market-challenge.md)
+  * [$YU: Bitcoin Back Over-collateral Stablecoin](yala-bitcoin-liquidity-solution/about-yala/usdyu-bitcoin-back-over-collateral-stablecoin.md)
+  * [Our Mission](yala-bitcoin-liquidity-solution/about-yala/our-mission.md)
+  * [Yala's Value Proposition](yala-bitcoin-liquidity-solution/about-yala/yalas-value-proposition.md)
 
 ***
 
