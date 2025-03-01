@@ -1,7 +1,5 @@
 # Minting and Redeeming $YU
 
-## Minting & Redemption
-
 ### Minting $YU
 
 The minting process for $YU is implemented through a systematic collateralized debt position system within the protocol's smart contracts. Users interact primarily with the BorrowerOperations contract to create new $YU tokens by depositing Bitcoin as collateral. The process begins when a user calls the `openTrove` function, specifying their desired collateral amount and debt (the amount of $YU to mint). The system then performs several critical validation steps: it verifies the collateralization ratio exceeds the Minimum Collateralization Ratio (MCR), checks that the system-wide Critical Collateralization Ratio (CCR) is maintained, and confirms the total debt remains below the system debt ceiling.
