@@ -1,8 +1,8 @@
-# Overview
+# Yala Architecture
 
 The Yala protocol is an innovative DeFi platform that bridges Bitcoin liquidity across multiple ecosystems.&#x20;
 
-<figure><img src="../.gitbook/assets/photo_2024-09-26_19-29-56.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/photo_2024-09-26_19-29-56.jpg" alt=""><figcaption></figcaption></figure>
 
 The architecture is divided into three interconnected sections.
 

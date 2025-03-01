@@ -6,15 +6,15 @@
   * [Try Yala Testnet](https://app-testnet.yala.org/)
   * [Market Challenge](yala-bitcoin-liquidity-solution/about-yala/market-challenge.md)
   * [$YU: Bitcoin Back Over-collateral Stablecoin](yala-bitcoin-liquidity-solution/about-yala/usdyu-bitcoin-back-over-collateral-stablecoin.md)
-  * [Yala's Value Proposition](yala-bitcoin-liquidity-solution/about-yala/yalas-value-proposition.md)
+  * [Yala Architecture](yala-bitcoin-liquidity-solution/about-yala/yala-architecture.md)
 
 ***
 
-* [Introduction to $YU Stablecoin](introduction-to-usdyu-stablecoin/README.md)
-  * [The $YU Stablecoin](introduction-to-usdyu-stablecoin/the-usdyu-stablecoin.md)
-  * [Why $YU Stablecoin?](introduction-to-usdyu-stablecoin/why-usdyu-stablecoin.md)
-  * [How $YU Maintains Stability](introduction-to-usdyu-stablecoin/how-usdyu-maintains-stability.md)
-  * [Minting and Redeeming $YU](introduction-to-usdyu-stablecoin/minting-and-redeeming-usdyu.md)
+* [$YU Stablecoin](usdyu-stablecoin/README.md)
+  * [$YU Stablecoin Design](usdyu-stablecoin/usdyu-stablecoin-design.md)
+  * [Why $YU Stablecoin?](usdyu-stablecoin/why-usdyu-stablecoin.md)
+  * [How $YU Maintains Stability](usdyu-stablecoin/how-usdyu-maintains-stability.md)
+  * [Minting and Redeeming $YU](usdyu-stablecoin/minting-and-redeeming-usdyu.md)
 
 ## User Guide V3
 
@@ -40,7 +40,6 @@
 
 ## Protocol Architecture Design
 
-* [Overview](protocol-architecture-design/overview.md)
 * [What Can You Do with Yala Bridge](protocol-architecture-design/what-can-you-do-with-yala-bridge.md)
 * [How It Works](protocol-architecture-design/how-it-works.md)
 * [Implementation of the Yala Bridge](protocol-architecture-design/implementation-of-the-yala-bridge.md)
@@ -61,13 +60,13 @@
 
 ## User Guide V2
 
-* [Connecting Wallet](user-guide-v2/connecting-wallet.md)
 * [MetaMint $YU](user-guide-v2/metamint-usdyu.md)
-* [Portfolio Management](user-guide-v2/portfolio-management.md)
-* [Berries Rule - Yala's Reward System](user-guide-v2/berries-rule-yalas-reward-system/README.md)
-  * [Yala Testnet: Team Ups & Lucky Draws](user-guide-v2/berries-rule-yalas-reward-system/yala-testnet-team-ups-and-lucky-draws.md)
+* [Berries Rule - Yala's Reward System](user-guide-v2/berries-rule-yalas-reward-system.md)
 * [Liquidation](user-guide-v2/liquidation.md)
 * [Testnet Contract Address](user-guide-v2/testnet-contract-address.md)
+* [Connecting Wallet](user-guide-v2/connecting-wallet.md)
+* [Portfolio Management](user-guide-v2/portfolio-management.md)
+* [Yala Testnet: Team Ups & Lucky Draws](user-guide-v2/yala-testnet-team-ups-and-lucky-draws.md)
 
 ## Frequently Asked Questions
 
