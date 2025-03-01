@@ -17,16 +17,16 @@
   * [How $YU Maintains Stability](introduction-to-usdyu-stablecoin/how-usdyu-maintains-stability.md)
   * [Minting and Redeeming $YU](introduction-to-usdyu-stablecoin/minting-and-redeeming-usdyu.md)
 
-## Copy of User Guide V3
+## User Guide V3
 
-* [Connecting Wallet](copy-of-user-guide-v3/connecting-wallet.md)
-* [MetaMint $YU](copy-of-user-guide-v3/metamint-usdyu.md)
-* [Portfolio Management](copy-of-user-guide-v3/portfolio-management.md)
-* [Earn](copy-of-user-guide-v3/earn.md)
-* [Berries Rule - Yala's Reward System](copy-of-user-guide-v3/berries-rule-yalas-reward-system/README.md)
-  * [Yala Testnet: Team Ups & Lucky Draws](copy-of-user-guide-v3/berries-rule-yalas-reward-system/yala-testnet-team-ups-and-lucky-draws.md)
-* [Liquidation](copy-of-user-guide-v3/liquidation.md)
-* [Testnet Contract Address](copy-of-user-guide-v3/testnet-contract-address.md)
+* [Connecting Wallet](user-guide-v3/connecting-wallet.md)
+* [MetaMint $YU](user-guide-v3/metamint-usdyu.md)
+* [Portfolio Management](user-guide-v3/portfolio-management.md)
+* [Earn](user-guide-v3/earn.md)
+* [Berries Rule - Yala's Reward System](user-guide-v3/berries-rule-yalas-reward-system/README.md)
+  * [Yala Testnet: Team Ups & Lucky Draws](user-guide-v3/berries-rule-yalas-reward-system/yala-testnet-team-ups-and-lucky-draws.md)
+* [Liquidation](user-guide-v3/liquidation.md)
+* [Testnet Contract Address](user-guide-v3/testnet-contract-address.md)
 
 ***
 
