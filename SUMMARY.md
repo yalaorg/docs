@@ -12,7 +12,6 @@
 
 * [$YU Stablecoin](usdyu-stablecoin/README.md)
   * [$YU Stablecoin Design](usdyu-stablecoin/usdyu-stablecoin-design.md)
-  * [Why $YU Stablecoin?](usdyu-stablecoin/why-usdyu-stablecoin.md)
   * [Minting and Redeeming $YU](usdyu-stablecoin/minting-and-redeeming-usdyu.md)
 
 ## User Guide V3
