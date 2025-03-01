@@ -14,16 +14,10 @@
   * [$YU Stablecoin Design](usdyu-stablecoin/usdyu-stablecoin-design.md)
   * [Minting and Redeeming $YU](usdyu-stablecoin/minting-and-redeeming-usdyu.md)
 
-## User Guide V3
+## Security Framework
 
-* [Connecting Wallet](user-guide-v3/connecting-wallet.md)
-* [MetaMint $YU](user-guide-v3/metamint-usdyu.md)
-* [Portfolio Management](user-guide-v3/portfolio-management.md)
-* [Earn](user-guide-v3/earn.md)
-* [Berries Rule - Yala's Reward System](user-guide-v3/berries-rule-yalas-reward-system/README.md)
-  * [Yala Testnet: Team Ups & Lucky Draws](user-guide-v3/berries-rule-yalas-reward-system/yala-testnet-team-ups-and-lucky-draws.md)
-* [Liquidation](user-guide-v3/liquidation.md)
-* [Testnet Contract Address](user-guide-v3/testnet-contract-address.md)
+* [Yala MetaVault Security Design](security-framework/yala-metavault-security-design.md)
+* [Yala Bitcoin Bridge](security-framework/yala-bitcoin-bridge.md)
 
 ***
 
@@ -35,12 +29,6 @@
 * [Features and Benefits of MetaMint](metamint/features-and-benefits-of-metamint.md)
 * [Safety Measures](metamint/safety-measures.md)
 * [Conclusion](metamint/conclusion.md)
-
-## Protocol Architecture Design
-
-* [What Can You Do with Yala Bridge](protocol-architecture-design/what-can-you-do-with-yala-bridge.md)
-* [How It Works](protocol-architecture-design/how-it-works.md)
-* [Implementation of the Yala Bridge](protocol-architecture-design/implementation-of-the-yala-bridge.md)
 
 ***
 
@@ -72,6 +60,17 @@
 * [Product](frequently-asked-questions/product.md)
 * [Risk Mitigation](frequently-asked-questions/risk-mitigation.md)
 * [Market landscape](frequently-asked-questions/market-landscape.md)
+
+## User Guide V3
+
+* [Connecting Wallet](user-guide-v3/connecting-wallet.md)
+* [MetaMint $YU](user-guide-v3/metamint-usdyu.md)
+* [Portfolio Management](user-guide-v3/portfolio-management.md)
+* [Earn](user-guide-v3/earn.md)
+* [Berries Rule - Yala's Reward System](user-guide-v3/berries-rule-yalas-reward-system/README.md)
+  * [Yala Testnet: Team Ups & Lucky Draws](user-guide-v3/berries-rule-yalas-reward-system/yala-testnet-team-ups-and-lucky-draws.md)
+* [Liquidation](user-guide-v3/liquidation.md)
+* [Testnet Contract Address](user-guide-v3/testnet-contract-address.md)
 
 ## QUICK LINKS
 
