@@ -29,11 +29,18 @@ The name "Yala" draws inspiration from Yala Peak a mountain. It symbolizes the e
 
 Yala's founding team brings together a wealth of experience from the forefront of blockchain and DeFi innovation. Our team comprises experts who have held key positions at industry-leading organizations such as Alchemy Pay, Binance Labs, Circle, MakerDAO, Lido, Microsoft, and Capital One, each contributing extensive experience in developing, scaling, and operating successful ventures in the cryptocurrency and DeFi spaces.
 
-### Our Vision
+### Our Vision and Mission
 
 Our team's expertise, strong backing from industry leaders, and our name's symbolic strength position Yala at the forefront of the Bitcoin DeFi revolution. We are committed to building a robust, secure, and innovative platform that unlocks Bitcoin's full potential in the decentralized finance ecosystem, creating solutions that will endure and evolve like the majestic peak we're named after.
 
-Yala has secured $8 million in seed funding led by Polychain Capital and Ethereal Ventures. This round also saw participation from a diverse group of respected investors in the blockchain and finance sectors. The strong backing from these industry leaders provides us with crucial financial support and access to extensive networks and expertise. This support has been instrumental in accelerating our growth and development, underscoring the potential and promise of Yala's vision for Bitcoin DeFi.
+At Yala, our vision is to create a thriving, open ecosystem that unlocks the full potential of DeFi on Bitcoin.&#x20;
+
+1. **Unleashing the untapped potential for Bitcoin assets:** Yala is committed to unlocking the full potential of DeFi on Bitcoin. With the Bitcoin-backed Yu stablecoin, we will offer Bitcoin holders a meta-yield from all other chains.&#x20;
+2. **Democratizing DeFi accessibility:** Our vision revolves around democratizing access to DeFi, enabling individuals and organizations to participate in a transparent, accessible, self-sovereign, decentralized financial system. We aim to foster an open ecosystem where diverse DeFi applications can seamlessly interoperate and compose, driving innovation, collaboration, and shared value creation.
+3. **Embracing decentralized governance for the lending protocol:** At the core of our endeavor lies a commitment to decentralization and community governance. We strive to transition our lending protocol's governance structure into a Decentralized Autonomous Organization (DAO), empowering the broader community to actively shape the Yala ecosystem's evolution. We aspire to create a self-sustaining, resilient, continuously evolving DeFi ecosystem on Bitcoin through inclusivity and collective ownership.
+4. **Pioneering Bitcoin's DeFi landscape:** Yala's ultimate goal is to establish itself as the preeminent DeFi infrastructure for Bitcoin. We envision a future where individuals and organizations can access a wide array of secure, transparent, and decentralized financial services, products, and opportunities within the Bitcoin ecosystem.&#x20;
+
+Together, we will build the true DeFi ecosystem for Bitcoin, unlocking a world of possibilities and driving the mass adoption of decentralized finance on the world's most secure and resilient blockchain network.
 
 
 

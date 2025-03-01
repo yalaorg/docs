@@ -6,7 +6,6 @@
   * [Try Yala Testnet](https://app-testnet.yala.org/)
   * [Market Challenge](yala-bitcoin-liquidity-solution/about-yala/market-challenge.md)
   * [$YU: Bitcoin Back Over-collateral Stablecoin](yala-bitcoin-liquidity-solution/about-yala/usdyu-bitcoin-back-over-collateral-stablecoin.md)
-  * [Our Mission](yala-bitcoin-liquidity-solution/about-yala/our-mission.md)
   * [Yala's Value Proposition](yala-bitcoin-liquidity-solution/about-yala/yalas-value-proposition.md)
 
 ***
