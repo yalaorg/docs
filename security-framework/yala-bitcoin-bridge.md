@@ -46,5 +46,3 @@ Our bridge design specifically addresses the most critical attack vectors in cro
 4. **Exit Path Guarantees**: Unlike many bridge designs, our architecture provides users with cryptographic guarantees for fund retrieval through time-locked recovery paths, ensuring that funds can be recovered even in catastrophic bridge failure scenarios.
 
 <figure><img src="../.gitbook/assets/photo_2025-02-20_21-05-28.jpg" alt=""><figcaption><p>Yala Bridge</p></figcaption></figure>
-
-## &#x20;<a href="#docs-internal-guid-02f631fd-7fff-5dec-2290-208e673b7e39" id="docs-internal-guid-02f631fd-7fff-5dec-2290-208e673b7e39"></a>
