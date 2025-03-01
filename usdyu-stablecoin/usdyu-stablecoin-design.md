@@ -1,6 +1,6 @@
 # $YU Stablecoin Design
 
-$YU is an over-collateralized stablecoin primarily backed by Bitcoin, designed to maintain a stable value relative to the US dollar. It leverages the robustness and decentralization of the Bitcoin network while enabling stablecoin transactions to settle on other chains.
+$YU is an over-collateralized stablecoin primarily backed by Bitcoin, designed to maintain a stable value relative to the US dollar.&#x20;
 
 ### Core Mechanics
 
