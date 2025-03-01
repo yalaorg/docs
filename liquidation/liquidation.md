@@ -61,4 +61,4 @@ To minimize the frequency of liquidations and protect the protocol and its users
 
 ### Conclusion <a href="#conclusion" id="conclusion"></a>
 
-Yala Protocol's liquidation process is designed to prioritize system stability, efficiency, and fairness. By utilizing Stability Pools as the primary mechanism and incorporating fallback options like JIT liquidations and redistribution. With robust safeguards, transparent operations, and user-focused tools, the protocol remains solvent while providing transparent and effective risk management for all participants.
+Yala Protocol's liquidation process is designed to prioritize system stability, efficiency, and fairness. By utilizing Stability Pools as the primary mechanism and incorporating fallback options like redistribution. With robust safeguards, transparent operations, and user-focused tools, the protocol remains solvent while providing transparent and effective risk management for all participants.
