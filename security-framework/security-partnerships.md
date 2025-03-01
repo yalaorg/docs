@@ -8,7 +8,7 @@ The Yala Bridge's robust security framework is strengthened by strategic partner
 
 **Anchorage Digital**, as a federally chartered digital asset bank, offers institutional-grade custody solutions that integrate with our bridge infrastructure. Their SOC 2 Type 1 compliant custody platform provides secure key storage with governance controls that enhance our security posture for regulated institutions.
 
-**Cubist** powers our advanced threshold cryptography implementation with their state-of-the-art MPC framework. Their technology enables secure distributed key management without ever reconstructing complete private keys, implementing a 9-of-11 threshold signature scheme that maintains security even if individual nodes are compromised.
+**Cubist** powers our protocol with their innovative hardware-enshrined smart contracts for Bitcoin. Their CubeSigner technology generates and stores secret keys in secure hardware while enforcing sophisticated policy rules that control how funds can be used—effectively bringing smart contract-like guarantees to Bitcoin transactions. For Yala, this enables complex programmatic controls over Bitcoin deposits, ensuring funds can only follow predefined paths (such as being used as collateral or returned to users) without relying on traditional custodial approaches. This hardware-based policy enforcement creates cryptographic guarantees about fund flows that were previously impossible on Bitcoin, significantly enhancing the security and trustlessness of our bridge implementation.
 
 ### Security Monitoring & Compliance
 
