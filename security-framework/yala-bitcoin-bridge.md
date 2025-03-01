@@ -20,13 +20,17 @@ Post-deposit, our system employs a sophisticated multi-threshold validation fram
 2. **Cross-Chain Attestation**: The selected notaries independently verify the Bitcoin transaction's inclusion and finality (requiring 6 confirmations) and cryptographically attest to this fact. These attestations are constructed using threshold signature schemes that prevent any individual notary from unilaterally authorizing minting operations.
 3. **Multi-Stage Verification**: The validation process examines multiple cryptographic proofs: (a) existence of the Bitcoin UTXO, (b) proper script construction, (c) confirmation depth, and (d) destination address verification. All of these verifications occur through independent paths, creating a defense-in-depth validation framework.
 
-#### Cubist Key Management Implementation
+### Cubist Hardware-Enshrined Smart Contract Implementation
 
-The security foundation of the Yala Bridge relies on Cubist's advanced threshold signature cryptography. Rather than using simple multisignature schemes, we implement a t-of-n threshold ECDSA protocol that distributes signing authority across multiple independent security providers:
+The security foundation of the Yala Bridge relies on Cubist's innovative hardware-enshrined smart contract technology. Rather than traditional multisignature schemes or conventional MPC setups, we leverage Cubist's unique approach that brings smart contract-like guarantees to Bitcoin:
 
-1. **Keyless Operation**: The Cubist implementation leverages secure multiparty computation (MPC) to generate signatures without ever reconstructing a complete private key. This means no single entity—not even Yala—can access the full key material necessary to sign transactions.
-2. **Hardware Security Integration**: Each notary validator maintains its key share within a hardware security module (HSM) or secure enclave, providing physical security guarantees against key exfiltration attacks.
-3. **Dynamic Participation**: The threshold design (9-of-11) ensures operational resilience even when some validators are unavailable, while maintaining a high security threshold against compromise.
+**Policy-Driven Key Management**: The Cubist implementation uses their CubeSigner technology to generate and store keys in secure hardware while enforcing sophisticated policies that control fund usage. These policies act as "smart contracts on Bitcoin," defining precisely how deposited funds can be used within the Yala ecosystem.
+
+**Hardware Security Guarantees**: All cryptographic operations occur within secure hardware enclaves, ensuring that private keys never exist in plaintext memory and that all transactions must comply with predefined policy rules. This creates a cryptographic guarantee that funds can only follow authorized paths.
+
+**Programmatic Fund Flow Control**: For Yala's bridge implementation, Cubist enforces critical rules such as: (1) deposited Bitcoin can only be used as collateral or returned to the original depositor, (2) governance changes require multi-party approval with time delays, and (3) specific transaction limits and timing constraints to mitigate attack scenarios.
+
+**Built-in Recovery Mechanisms**: The policy framework includes mandatory time-locked recovery paths, ensuring users retain ultimate control over their Bitcoin. This creates a non-custodial bridge architecture where users don't have to trust Yala or any third party with permanent control of their assets.
 
 #### YBTC Minting Process
 
