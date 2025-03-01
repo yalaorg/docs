@@ -17,7 +17,7 @@ layout:
 
 # About Yala
 
-### <mark style="color:green;">**Yala offer a stablecoin $YU backed by Bitcoin, linking Bitcoin's liquidity to the broader ecosystem.**</mark>
+### <mark style="color:green;">**Yala offers a stablecoin $YU backed by Bitcoin, linking Bitcoin's liquidity to the broader ecosystem.**</mark>
 
 
 
