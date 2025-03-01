@@ -1,64 +1,50 @@
-# Implementation of the Yala Bridge
+# Yala Bitcoin Bridge
 
-The Yala Bridge allows users to deposit Bitcoin and receive yBTC, a tokenized representation of Bitcoin on the Yala platform. This token, yBTC, can then be used as collateral within the Yala ecosystem, allowing users to mint $YU, Yala’s Bitcoin-backed stablecoin, across different blockchain environments, including EVM and non-EVM chains. This process not only facilitates cross-chain liquidity but also broadens the accessibility of Bitcoin in DeFi, making it possible for users to participate in yield-generating activities, lending, and more diverse DeFi strategies.
+### Core Design Principles
 
-The bridge is secured by a Decentralized Notary Bridge and MetaSafe Key Management powered by Cubist, ensuring a secure, transparent, and decentralized asset transfer process.
+The Yala Bridge represents a significant advancement in cross-chain Bitcoin integration, designed specifically to address the fundamental security and centralization challenges inherent in traditional bridge implementations. Rather than relying on custodial mechanisms that compromise Bitcoin's security guarantees, our architecture implements a decentralized notary system with threshold cryptography to maintain Bitcoin's security properties throughout the bridging process. This enables users to access Ethereum's DeFi ecosystem using Bitcoin as collateral without sacrificing the core tenets of decentralization and self-custody that define the Bitcoin network.
 
-### How the Yala Bridge Works <a href="#docs-internal-guid-d9b5a7cc-7fff-a9b0-e606-e76a990597bc" id="docs-internal-guid-d9b5a7cc-7fff-a9b0-e606-e76a990597bc"></a>
+### Technical Architecture
 
-#### 1. BTC Deposit & Key Management
+#### BTC Deposit & Cryptographic Attestation
 
-* Users initiate the process by depositing BTC into Yala’s MetaSafe.
-* Key management is handled by Cubist, a secure cryptographic solution that ensures asset custody is protected against single points of failure.
+The bridging process begins with a Bitcoin deposit flow that incorporates advanced cryptographic attestation techniques. Users initiate a Bitcoin transaction to a specially constructed P2WSH (Pay-to-Witness-Script-Hash) address derived from a threshold signature scheme. This deposit transaction includes a cross-chain intent message encoded within the OP\_RETURN output field, cryptographically binding the deposit to the user's destination address on the target blockchain.
 
-#### 2. Decentralized Notary Bridge Validation
+The critical security innovation here is that deposits do not require transferring custody to a central entity. Instead, the P2WSH script incorporates a time-locked recovery path that enables users to reclaim their Bitcoin after a predefined period should the bridge process fail. This provides a cryptographic guarantee of fund safety without requiring blind trust in the bridge operators.
 
-* **Random Notary Selection:** The system selects a VRF-based random notary to process the transaction.
-* **Signature Verification:** The notary provides a cryptographic signature to confirm asset locking.
-* **Key Agreement:** Secure multi-party computation (MPC) ensures private key management remains trustless.
-* **Transaction Broadcast:** The deposit transaction is finalized on the Bitcoin network, and a message is relayed to the destination chain.
+#### Multi-Threshold Validation Framework
 
-#### 3. Issuance of yBTC on Destination Chain <a href="#docs-internal-guid-17832d1b-7fff-b81a-93a9-06b8933fcf3b" id="docs-internal-guid-17832d1b-7fff-b81a-93a9-06b8933fcf3b"></a>
+Post-deposit, our system employs a sophisticated multi-threshold validation framework managed through a distributed notary protocol:
 
-* Once the Notary Bridge verifies the deposit, an Issuer Smart Contract mints yBTC on the selected destination chain.
-* This yBTC acts as a tokenized representation of Bitcoin, allowing users to access DeFi applications.
+1. **Deterministic Validator Selection**: Using a verifiable random function (VRF) derived from the Bitcoin block hash, the system programmatically selects a quorum of 9 from the 11 notary validators. This unpredictable selection mechanism prevents validator collusion and targeted attacks.
+2. **Cross-Chain Attestation**: The selected notaries independently verify the Bitcoin transaction's inclusion and finality (requiring 6 confirmations) and cryptographically attest to this fact. These attestations are constructed using threshold signature schemes that prevent any individual notary from unilaterally authorizing minting operations.
+3. **Multi-Stage Verification**: The validation process examines multiple cryptographic proofs: (a) existence of the Bitcoin UTXO, (b) proper script construction, (c) confirmation depth, and (d) destination address verification. All of these verifications occur through independent paths, creating a defense-in-depth validation framework.
 
-#### 4. Minting $YU Stablecoin
+#### Cubist Key Management Implementation
 
-* Users can use yBTC as collateral to mint $YU within the Yala protocol.
-* $YU is then usable across DeFi ecosystems, enabling payments, staking, and liquidity provision.
+The security foundation of the Yala Bridge relies on Cubist's advanced threshold signature cryptography. Rather than using simple multisignature schemes, we implement a t-of-n threshold ECDSA protocol that distributes signing authority across multiple independent security providers:
+
+1. **Keyless Operation**: The Cubist implementation leverages secure multiparty computation (MPC) to generate signatures without ever reconstructing a complete private key. This means no single entity—not even Yala—can access the full key material necessary to sign transactions.
+2. **Hardware Security Integration**: Each notary validator maintains its key share within a hardware security module (HSM) or secure enclave, providing physical security guarantees against key exfiltration attacks.
+3. **Dynamic Participation**: The threshold design (9-of-11) ensures operational resilience even when some validators are unavailable, while maintaining a high security threshold against compromise.
+
+#### YBTC Minting Process
+
+Once validation is complete, the destination chain contract mints yBTC tokens (tokenized Bitcoin) to the user's specified address. This process incorporates several critical security features:
+
+1. **Atomicity Guarantees**: The minting process is designed to be atomic—either completing fully or reverting entirely—preventing partial issuances that could lead to system inconsistencies.
+2. **Supply Verification**: The contract maintains a cryptographic commitment to the total Bitcoin locked in the system, ensuring that yBTC can only be minted against verified Bitcoin deposits.
+3. **Attestation Verification**: Before executing a mint operation, the contract cryptographically verifies that a valid threshold of notary signatures has been provided, preventing unauthorized minting.
+
+### Security Considerations
+
+Our bridge design specifically addresses the most critical attack vectors in cross-chain bridges:
+
+1. **Bridge Compromise Resistance**: The threshold signature scheme ensures that even if a subset of notaries (up to n-t, or 2 in our 9-of-11 configuration) is compromised, the attacker cannot issue unauthorized mints or redirect funds.
+2. **Chain Reorganization Protection**: The 6-confirmation requirement on Bitcoin deposits establishes a statistical guarantee against blockchain reorganization attacks, while the notary attestation process provides additional verification beyond mere confirmation count.
+3. **Economic Security**: Notaries are required to stake significant collateral, creating an economic disincentive for malicious behavior that scales with the bridge's total value locked.
+4. **Exit Path Guarantees**: Unlike many bridge designs, our architecture provides users with cryptographic guarantees for fund retrieval through time-locked recovery paths, ensuring that funds can be recovered even in catastrophic bridge failure scenarios.
 
 <figure><img src="../.gitbook/assets/photo_2025-02-20_21-05-28.jpg" alt=""><figcaption><p>Yala Bridge</p></figcaption></figure>
 
-## Security & Decentralization of the Yala Bridge <a href="#docs-internal-guid-02f631fd-7fff-5dec-2290-208e673b7e39" id="docs-internal-guid-02f631fd-7fff-5dec-2290-208e673b7e39"></a>
-
-The Yala Bridge prioritizes security, decentralization, and composability through key design elements:
-
-### MetaSafe Key Management (Cubist)
-
-* Utilizes secure enclaves and multi-party computation (MPC) to protect private keys.
-* Removes single points of failure and enhances institutional-grade custody.
-
-#### Attack Prevention:
-
-* **Single Point of Failure Mitigation:** Unlike traditional custody solutions, where a single compromised private key can result in loss of funds, MPC ensures that multiple entities must collaborate to authorize transactions.
-* **Man-in-the-Middle (MitM) Attacks:** Secure enclaves protect private key operations, preventing MitM attacks from intercepting key usage.
-* **Insider Attacks:** Since no individual has full access to a private key, even an insider with privileged access cannot sign transactions alone.
-* **Key Extraction Attacks:** Even if an attacker gains system-level access, MPC ensures that the fragmented key shares remain useless in isolation.
-
-### Decentralized Notary Bridge
-
-* Validators operate independently, ensuring decentralized transaction verification.
-* Notary selection is randomized, preventing centralization risks.
-* Uses multi-signature validation to approve BTC deposits before minting yBTC.
-
-#### Attack Prevention:
-
-* **Centralization Risks:** By using VRF-based selection and rotating notaries, no single entity can take over the bridge validation process.
-* **Validator Collusion:** The multi-signature requirement ensures that even if some validators attempt fraud, they would need a majority to execute an attack, which is costly and detectable.
-* **Double Spending Attacks:** The notary system verifies BTC deposits before minting yBTC, preventing replay or forged deposit claims.
-
-### Robust Smart Contract Security
-
-* The Issuer Smart Contract ensures that yBTC is only minted when BTC deposits are properly validated.
-* Cross-chain messaging protocols prevent double issuance and unauthorized minting.
+## &#x20;<a href="#docs-internal-guid-02f631fd-7fff-5dec-2290-208e673b7e39" id="docs-internal-guid-02f631fd-7fff-5dec-2290-208e673b7e39"></a>
