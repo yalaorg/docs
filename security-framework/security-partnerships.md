@@ -4,7 +4,7 @@ The Yala Bridge's robust security framework is strengthened by strategic partner
 
 ### Custody & Key Management Partners
 
-[**Cobo**](https://www.cobo.com/) provides enterprise-grade custody infrastructure with MPC-based key management that secures portions of the bridge's threshold signature system. Their HSM-backed security architecture and regulatory compliance framework adds an additional layer of protection for institutional depositors using the Yala Bridge.
+**Cobo** provides enterprise-grade custody infrastructure with MPC-based key management that secures portions of the bridge's threshold signature system. Their HSM-backed security architecture and regulatory compliance framework adds an additional layer of protection for institutional depositors using the Yala Bridge.
 
 **Anchorage Digital**, as a federally chartered digital asset bank, offers institutional-grade custody solutions that integrate with our bridge infrastructure. Their SOC 2 Type 1 compliant custody platform provides secure key storage with governance controls that enhance our security posture for regulated institutions.
 
