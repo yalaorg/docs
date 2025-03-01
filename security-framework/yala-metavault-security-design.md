@@ -16,9 +16,18 @@ MetaVault's transaction validation framework implements rigorous security contro
 
 The transaction validation process employs a deterministic verification protocol where multiple independent watchtowers monitor both the Bitcoin blockchain and destination chains to verify transaction authenticity. Cross-chain message verification utilizes Merkle proofs to cryptographically verify the existence and validity of transactions across different consensus mechanisms, thereby maintaining cryptographic guarantees throughout the bridging process.
 
-### Hardware-Backed Security Enhancements
+### Hardware-Enshrined Smart Contract Implementation
 
-What distinguishes Cubist's approach is its integration of hardware security modules (HSMs) within the threshold signature framework. Each key fragment is stored within a dedicated HSM that provides physical tamper resistance, side-channel attack mitigation, and hardware-enforced access controls. These HSMs are strategically distributed across geographically diverse locations, operating under different jurisdictional authorities to minimize coercion risks. The Cubist architecture implements a secure enclave model where cryptographic operations occur exclusively within these hardware-protected environments, preventing key material from ever existing in plaintext in system memory.
+What distinguishes Cubist's approach is their pioneering hardware-enshrined smart contract technology. Rather than merely securing key fragments, Cubist's solution implements policy-driven security guarantees within secure hardware enclaves. These policies function as programmable rules that define exactly how funds can be used—effectively bringing smart contract-like logic to Bitcoin transactions.
+
+For Yala's MetaVault, this means each deposit is governed by cryptographically enforced rules that define permitted transaction flows. The Cubist architecture implements a secure enclave model where all cryptographic operations occur exclusively within hardware-protected environments. These secure enclaves not only store key material but also enforce transaction policies, ensuring that all operations comply with predefined rules such as:
+
+1. Deposit flows that only permit funds to move to authorized collateral pools
+2. Withdrawal paths that only allow returning funds to verified depositor addresses
+3. Governance operations that require multi-party approval with mandatory time delays
+4. Emergency recovery paths with time-locked mechanisms for user safety
+
+Each transaction request undergoes a series of policy verification steps before signature generation. For high-value transactions, the system enforces additional safeguards including mandatory time delays and out-of-band verification through independent communication channels. This creates multiple layers of protection against sophisticated attack vectors including supply chain compromises and advanced persistent threats. The integration of hardware-enforced policies provides significantly stronger security guarantees than traditional MPC systems alone. By encoding critical business logic directly into hardware-enforced rules, MetaVault ensures that even if multiple components of the system are compromised, the attacker cannot violate the fundamental rules governing how funds can be used. This represents a fundamental advancement in Bitcoin security, allowing Yala to create sophisticated DeFi functionality without sacrificing the security guarantees that Bitcoin users expect.
 
 ### Transaction Authorization Protocol
 
