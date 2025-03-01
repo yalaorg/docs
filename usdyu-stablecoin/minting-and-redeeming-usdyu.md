@@ -1,28 +1,15 @@
 # Minting and Redeeming $YU
 
-### What is Minting?
+## Minting & Redemption
 
-Minting is the process by which new $YU stablecoins are created and issued within the Yala protocol. It involves locking up collateral (such as BTC or other supported assets) to generate $YU tokens, which can then be used within the DeFi ecosystem. This process ensures that each $YU is backed by sufficient collateral, maintaining its stability and value.
+### Minting $YU
 
-### **Why Mint $YU?**
+The minting process for $YU is implemented through a systematic collateralized debt position system within the protocol's smart contracts. Users interact primarily with the BorrowerOperations contract to create new $YU tokens by depositing Bitcoin as collateral. The process begins when a user calls the `openTrove` function, specifying their desired collateral amount and debt (the amount of $YU to mint). The system then performs several critical validation steps: it verifies the collateralization ratio exceeds the Minimum Collateralization Ratio (MCR), checks that the system-wide Critical Collateralization Ratio (CCR) is maintained, and confirms the total debt remains below the system debt ceiling.
 
-Minting $YU offers several benefits to users:
+Once these validations pass, the protocol creates a unique Trove represented as an NFT (implemented in the TroveManager contract), which tracks the user's position. The TroveManager then calls the DebtToken contract to mint the specified amount of $YU to the user's address, plus a small amount to the Gas Pool as compensation for potential future liquidations. Each minting operation accrues interest over time through the TroveManager's interest rate mechanism, which increases the debt owed by the position holder. This interest is split between protocol revenue and the Stability Pool as configured by the SPYieldPCT parameter. The minting process is permissionless, allowing any user to create multiple Troves with different collateralization levels, each tracked separately through the NFT-based system.
 
-* Liquidity: Users can unlock the value of their assets without selling them.
-* Earning Potential: Minted $YU can be used in various DeFi applications to earn interest, participate in yield farming, and more.
-* Stable Value: $YU is designed to maintain a stable value, providing a reliable medium of exchange and store of value.
+### Redemption
 
-### **Requirements for Minting $YU**
+$YU offers two primary redemption paths, each serving different user needs. The first path is through direct repayment of debt positions. Users can call the `repay` or `closeTrove` functions in the BorrowerOperations contract to reduce or eliminate their debt by burning $YU tokens. When a user closes their Trove completely, they burn their outstanding $YU debt (including accrued interest), retrieve their full collateral, and the system burns the Trove NFT, effectively removing the position from the system. This direct redemption method allows users to regain their Bitcoin collateral at any time, provided they can repay their associated debt.
 
-To mint $YU, users need to:
-
-* Have a Supported Wallet: Users must connect a compatible wallet to the Yala protocol.
-* Provide Collateral: Users must deposit an accepted collateral asset, such as BTC, into the Yala protocol.
-* Maintain Collateralization Ratio: Users must ensure that the value of their collateral meets or exceeds the minimum collateralization ratio required by the protocol.
-
-**Key Considerations**
-
-* **Collateralization Ratio:** Maintaining the required collateralization ratio is crucial to avoid liquidation. Users should monitor the value of their collateral and add more if necessary.
-* **Fees:** The minting process may involve fees deducted from the collateral or the minted $YU. Users should be aware of these fees and factor them into their calculations.
-
-By understanding the minting process, users can effectively leverage their assets to generate $YU, participate in the DeFi ecosystem, and maximize their earning potential within the Yala protocol.
+The second redemption path is through the PSM (Peg Stability Module) contract, which enables users to exchange $YU for other stablecoins at rates close to parity, subject to configurable fees. Users call the `sell` function in the PSM contract, which burns their $YU tokens and transfers the equivalent amount of the configured stablecoin to their address. This mechanism provides liquidity and additional redemption options without requiring users to have an open Trove position. Both redemption methods are implemented with strict validation checks to maintain system integrity and proper accounting of debt and collateral throughout the protocol. The system's ability to process redemptions efficiently even during market stress is an important factor in maintaining $YU's stability and user confidence in the protocol.
