@@ -18,6 +18,7 @@
 
 * [Yala MetaVault Security Design](security-framework/yala-metavault-security-design.md)
 * [Yala Bitcoin Bridge](security-framework/yala-bitcoin-bridge.md)
+* [Security Partnerships](security-framework/security-partnerships.md)
 
 ## MetaMint
 
