@@ -19,10 +19,6 @@
 * [Yala MetaVault Security Design](security-framework/yala-metavault-security-design.md)
 * [Yala Bitcoin Bridge](security-framework/yala-bitcoin-bridge.md)
 
-***
-
-* [YaYaGent - Your AI-Powered $YU Yield Farming Strategist](yayagent-your-ai-powered-usdyu-yield-farming-strategist.md)
-
 ## MetaMint
 
 * [What is MetaMint and how does it work?](metamint/what-is-metamint-and-how-does-it-work.md)
@@ -53,6 +49,10 @@
 * [Connecting Wallet](user-guide-v2/connecting-wallet.md)
 * [Portfolio Management](user-guide-v2/portfolio-management.md)
 * [Yala Testnet: Team Ups & Lucky Draws](user-guide-v2/yala-testnet-team-ups-and-lucky-draws.md)
+
+***
+
+* [YaYaGent - Your AI-Powered $YU Yield Farming Strategist](yayagent-your-ai-powered-usdyu-yield-farming-strategist.md)
 
 ## Frequently Asked Questions
 
