@@ -35,9 +35,3 @@ The Cubist key management system implements a sophisticated multi-level transact
 
 The authorization protocol incorporates a specialized secure multi-party computation (MPC) framework that allows threshold signature generation to occur without exposing key fragments to any single entity. This computational model ensures that even if multiple nodes in the system are compromised, the attacker cannot reconstruct the complete private key or generate unauthorized signatures, maintaining the security integrity of Bitcoin assets held within the MetaVault.
 
-### Key Rotation and Recovery Mechanisms
-
-A critical security advantage of Cubist's key management system is its support for non-interactive key rotation procedures. This allows Yala to regularly update cryptographic material without requiring a complete redeployment of the vault infrastructure. The rotation protocol maintains threshold properties throughout the process, ensuring no temporary reduction in security during transitions. Additionally, Cubist implements sophisticated key recovery mechanisms that can restore operational capability following partial system failures or compromises, without introducing new attack surfaces.
-
-The recovery procedures incorporate Shamir's Secret Sharing with additional verification layers to prevent recovery fraud. These mechanisms are subjected to regular cryptographic attestation and verification through formal security proofs, ensuring that theoretical security guarantees translate to practical protections for user assets within the MetaVault ecosystem.
-
